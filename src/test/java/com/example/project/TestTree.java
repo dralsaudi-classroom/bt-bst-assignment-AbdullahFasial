@@ -135,5 +135,5 @@ public class TestTree {
       assertEquals(0, t.countNodesIn(240));
       assertEquals(3, t.countNodesIn(34));
       assertEquals(0, t.countNodesIn(4));
-   }
+   } 
 }
