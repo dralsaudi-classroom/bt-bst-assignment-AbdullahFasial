@@ -103,18 +103,18 @@ public class BT<T> {
 	    return countLeafNodesRec(root);
 	}
 	
-	private int countLeafNodesRec(BTNode<T> node) {
-	    if (node == null) {
+	private int countLeafNodesRec(BTNode<T> n) {
+	    if (n == null) {
 	        return 0;  
 	    }
     
     
-	    if (node.left == null && node.right == null) {
+	    if (n.left == null && n.right == null) {
 	        return 1;
 	    }
     
    
-	    return countLeafNodesRec(node.left) + countLeafNodesRec(node.right);
+	    return countLeafNodesRec(n.left) + countLeafNodesRec(n.right);
 	}
 
 }
