@@ -98,23 +98,17 @@ public class BT<T> {
 	public boolean isLeaf() {
 		return current.left == null && current.right == null;
 	}
-		public int countLeafNodes() {
-    	
-	    return countLeafNodesRec(root);
-	}
-	
-	private int countLeafNodesRec(BTNode<T> n) {
-	    if (n == null) 
-	        return 0;  
-	    
-    
-    
-	    if (n.left == null && n.right == null) 
-	        return 1;
-	    
-    
-   
-	    return countLeafNodesRec(n.left) + countLeafNodesRec(n.right);
-	}
+	public int countLeaves() {
+    return countLeaves(root);
+}
 
+private int countLeaves(BTNode<T> node) {
+    if (node == null) {
+        return 0;
+    }
+    if (node.left == null && node.right == null) {
+        return 1;
+    }
+    return countLeaves(node.left) + countLeaves(node.right);
+ }
 }
