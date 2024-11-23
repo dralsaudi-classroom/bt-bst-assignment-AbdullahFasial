@@ -154,7 +154,7 @@ public class BST<T> {
 		return p;
 	}
 	public int countNodesIn(int k) {
-    BSTNode<T> node = root;
+    BSTNode<T> n = root;
     
     while (n != null) {
         if (n.key == k) {
