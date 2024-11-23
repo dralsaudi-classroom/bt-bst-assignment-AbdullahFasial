@@ -1,6 +1,7 @@
 package com.example.project;
 
 public class TreeUser {
+    public static <T> int countLeafs(BT<T> bt, T e) {	
     public static <T> int countLeaves(BT<T> bt) {
         
 		// Write the method countLeafs that should return the number of leaf nodes in the tree. A leaf node is a node that has no children.
@@ -17,7 +18,7 @@ public class TreeUser {
   
     return recCountLeafs(bt);
 }
-
+}
 private static <T> int recCountLeafs(BT<T> bt) {
     if (bt.isLeaf()) {
         return 1; 
