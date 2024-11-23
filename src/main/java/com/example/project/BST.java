@@ -153,6 +153,13 @@ public class BST<T> {
 		}
 		return p;
 	}
+	private int countNodesInRec(BSTNode<T> n) {
+    if (n == null) {
+        return 0;  
+    }
+    
+    return 1 + countNodesInRec(n.left) + countNodesInRec(n.right);
+}
 	public int countNodesIn(int k) {
     BSTNode<T> n = root;
     
@@ -170,12 +177,6 @@ public class BST<T> {
     return countNodesInRec(n);
 }
 
-private int countNodesInRec(BSTNode<T> n) {
-    if (n == null) {
-        return 0;  
-    }
-    
-    return 1 + countNodesInRec(n.left) + countNodesInRec(n.right);
-}
+
 
 }
